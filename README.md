@@ -17,10 +17,22 @@ The streaming class connects to the Bitmex api, https://www.bitmex.com/api/explo
 The methods within the Streaming class include:
 
  - [x] subscribe_price() - for starting a price connection
- - [ ] subscribe_orderbook() - for starting an orderbook connection
+ - [x] subscribe_orderbook() - for starting an orderbook connection
  - [x] update_price() - for updating the current prices of the Subscribe object
- - [ ] update_orderbook() - for updating the current Orderbook (list of all the active orders at a given time)
+ - [x] update_orderbook() - for updating the current Orderbook (list of all the active orders at a given time)
  - [x] close_price_connection() - for closing the websocket connection to the price stream
- - [ ] close_orderbook_connection() - for closing the websocket connection to the Orderbook stream
+ - [x] close_orderbook_connection() - for closing the websocket connection to the Orderbook stream
 
 TODO: Update README for Trading Object and finish the simulator as well
+
+## Simulator
+
+#### Simulated Streaming
+
+The simulated streaming creates a series of potential bitcoin trading prices.
+
+The methods within the Simulated Streaming class include:
+
+  - [x] subscribe_price(start_price) - for starting a PSEUDO price connection
+  - [x] update_price() - for updating the current prices of the Simulated_Subscribe object
+  - [x] close_price_connection() - for closing the object (Doesn't actually do anything, just for consistency's sake)
