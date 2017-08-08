@@ -117,6 +117,6 @@ class Simulated_Streaming:
         return_dictionary["last_change_percentage"] = self.last_change_percentage
 
         return return_dictionary
-
-    def close_orderbook_connection(self):
+        
+    def close_price_connection(self):
         return "Successfully closed orderbook connection"
