@@ -4,10 +4,7 @@ Test and Trade different Bitmex Stock market techniques. Virtual trading is prov
 
 ### Setup
 
-    sudo apt install python-tk
-or
-    brew install python-tk
-
+    sudo apt/brew install python-tk
     sudo -H pip install -r requirements.txt
 
 ### Tips
