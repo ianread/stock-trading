@@ -1,0 +1,5 @@
+enum
+matplotlib
+requests
+websocket
+websocket-client

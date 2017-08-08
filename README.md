@@ -2,6 +2,14 @@
 
 Test and Trade different Bitmex Stock market techniques. Virtual trading is provided by the simulator. Actual trading is provided by the api_caller library.
 
+### Setup
+
+    sudo apt install python-tk
+or
+    brew install python-tk
+
+    sudo -H pip install -r requirements.txt
+
 ### Tips
 
   - Run the main_tests function to see if you have all of the modules installed

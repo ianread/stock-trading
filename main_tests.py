@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+
 from api_caller.streaming import Streaming
 from api_caller.streaming import TickDirection
 from api_caller.streaming import Order_Book_Value
