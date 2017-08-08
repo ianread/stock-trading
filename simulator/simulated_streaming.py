@@ -35,15 +35,12 @@ class Simulated_Streaming:
             return TickDirection.MinusTick
         elif string_val == "ZeroMinusTick":
             return TickDirection.ZeroMinusTick
-        elif string_val == "ZeroTick":
-            return TickDirection.ZeroTick
         elif string_val == "ZeroPlusTick":
             return TickDirection.ZeroPlusTick
         elif string_val == "PlusTick":
             return TickDirection.PlusTick
-
-        # default return
-        return TickDirection.ZeroTick
+        else: # default return
+            return TickDirection.ZeroTick
 
     def subscribe_price(self, start_price=2300):
 
@@ -117,6 +114,7 @@ class Simulated_Streaming:
         return_dictionary["last_change_percentage"] = self.last_change_percentage
 
         return return_dictionary
-        
+
     def close_price_connection(self):
         return "Successfully closed orderbook connection"
+

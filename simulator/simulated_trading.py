@@ -111,7 +111,7 @@ class Simulated_Trading:
             if (total_avaliable - ((amount*1.0)/price)) >= 0:
                 self.order_array.append(Order_Class(price, amount, Type.BUY))
             else:
-                errors += "Can't Buy Order at " +str(price)+ " because it exceeds your total avaliable \n";
+                errors += "Can't Buy Order at " +str(price)+ " because it exceeds your total available \n";
         else:
             errors += "Can't Buy Order at " +str(price)+ " because current price is "+str(last_price)+"\n"
 
@@ -132,7 +132,7 @@ class Simulated_Trading:
             if (total_avaliable - ((amount*1.0)/price)) >= 0:
                 self.order_array.append(Order_Class(price, amount, Type.SELL))
             else:
-                errors += "Can't Sell Order at " +str(price)+ " because it exceeds your total avaliable \n";
+                errors += "Can't Sell Order at " +str(price)+ " because it exceeds your total available \n";
         else:
             errors += "Can't Sell Order at " +str(price)+ " because current price is "+str(last_price)+"\n"
 
@@ -152,3 +152,4 @@ class Simulated_Trading:
 
     def check_profit(self, last_price):
         return self.__check_profit(last_price, self.order_array)
+
