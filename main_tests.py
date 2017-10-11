@@ -1,5 +1,3 @@
-#! /usr/bin/env python
-
 from api_caller.streaming import Streaming
 from api_caller.streaming import TickDirection
 from api_caller.streaming import Order_Book_Value
@@ -13,7 +11,7 @@ from simulator.simulated_trading import Simulated_Trading
 
 # Array to run tests (currently only one test)
 # [test_streaming]
-test_array = [1, 1, 1, 1]
+test_array = [1, 1, 0, 0]
 
 # run tests here
 def main_tests():

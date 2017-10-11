@@ -49,12 +49,15 @@ class Streaming:
             return TickDirection.MinusTick
         elif string_val == "ZeroMinusTick":
             return TickDirection.ZeroMinusTick
+        elif string_val == "ZeroTick":
+            return TickDirection.ZeroTick
         elif string_val == "ZeroPlusTick":
             return TickDirection.ZeroPlusTick
         elif string_val == "PlusTick":
             return TickDirection.PlusTick
-        else: # default return
-            return TickDirection.ZeroTick
+
+        # default return
+        return TickDirection.ZeroTick
 
     # call this first to open the websocket for the price
     def subscribe_price(self):
@@ -76,7 +79,7 @@ class Streaming:
         for r in result_orderbook:
             self.order_book[r["id"]] = Order_Book_Value(r["id"], r["price"], r["size"], r["side"])
 
-    # put this in an infinite loop to receive the updated values
+    # put this in an infitite loop to recieve the updated values
     def update_price(self):
         result =  self.ws_bitcoin.recv()
 
@@ -176,4 +179,3 @@ class Streaming:
     # to tidy up the orderbook connection, call this function
     def close_orderbook_connection(self):
         self.ws_bitcoin.close()
-
